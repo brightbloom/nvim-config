@@ -49,6 +49,13 @@ local plugins = {
       return M
     end
   },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function ()
+      require('dapui').setup()
+    end
+  }
 }
 return plugins
 
