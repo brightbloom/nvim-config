@@ -68,12 +68,9 @@ local plugins = {
 		ft = { "rust", "c", "python" },
 		config = true,
 	},
-
-	-- TODO: Do I need this?
-	{ "nmac427/guess-indent.nvim", config = true },
+	{ "nmac427/guess-indent.nvim", config = true, lazy = false },
 
 	-- Smooth scrolling
-	-- TODO: Why aren't the maps working?
 	{
 		"karb94/neoscroll.nvim",
 		config = function()
@@ -83,6 +80,7 @@ local plugins = {
 				["<C-Down>"] = { "scroll", { "vim.wo.scroll", "true", "100" } },
 			})
 		end,
+		lazy = false,
 	},
 
 	-- Undo tree
