@@ -1,5 +1,9 @@
 local plugins = {
 	{
+		"christoomey/vim-tmux-navigator",
+		lazy = false,
+	},
+	{
 		"williamboman/mason.nvim",
 		opts = {
 			ensure_installed = {
@@ -122,9 +126,9 @@ local plugins = {
 			require("custom.configs.lspconfig")
 		end,
 	},
-  {
-    "ThePrimeagen/harpoon",
-    dependencies = "nvim-lua/plenary.nvim"
-  }
+	{
+		"ThePrimeagen/harpoon",
+		dependencies = "nvim-lua/plenary.nvim",
+	},
 }
 return plugins

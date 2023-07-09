@@ -1,5 +1,27 @@
 local M = {}
 
+vim.g.tmux_navigator_no_mappings = 1
+M.nav = {
+  n = {
+    ["<C-w>n"] = {
+      "<cmd>TmuxNavigateLeft<CR>",
+      "Vim/Tmux one pane left"
+    },
+    ["<C-w>e"] = {
+      "<cmd>TmuxNavigateDown<CR>",
+      "Vim/Tmux one pane down"
+    },
+    ["<C-w>i"] = {
+      "<cmd>TmuxNavigateUp<CR>",
+      "Vim/Tmux one pane up"
+    },
+    ["<C-w>o"] = {
+      "<cmd>TmuxNavigateRight<CR>",
+      "Vim/Tmux one pane right"
+    }
+  },
+}
+
 M.harpoon = {
 	n = {
 		["<leader>mn"] = {
