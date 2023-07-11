@@ -31,3 +31,6 @@ dap.configurations.rust = {
     showDisassemply = "never"
   },
 }
+
+require('dap.ext.vscode').load_launchjs()
+
