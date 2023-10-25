@@ -71,6 +71,18 @@ M.lsp = {
 			end,
 			"Format file",
 		},
+		["<leader>lr"] = {
+			function()
+				vim.lsp.buf.rename()
+			end,
+			"Rename object",
+		},
+		["<leader>lR"] = {
+			function()
+				vim.lsp.buf.references()
+			end,
+			"Rename object",
+		},
 	},
 }
 
