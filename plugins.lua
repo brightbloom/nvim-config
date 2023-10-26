@@ -4,6 +4,14 @@ local plugins = {
 		lazy = false,
 	},
 	{
+		"ggandor/leap.nvim",
+		lazy = false,
+		config = function(_, opts)
+			local leap = require("leap")
+			leap.add_default_mappings()
+		end,
+  },
+	{
 		"williamboman/mason.nvim",
 		opts = {
 			ensure_installed = {

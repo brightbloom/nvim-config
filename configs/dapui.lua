@@ -17,20 +17,7 @@ local codelldb_path = codelldb_root .. "adapter/codelldb"
 local liblldb_path = codelldb_root .. "lldb/lib/liblldb.so"
 
 dap.adapters.codelldb = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
-
-dap.configurations.rust = {
-  {
-    name = "Rust debug",
-    type = "codelldb",
-    request = "launch",
-    program = function()
-      return vim.fn.input('Path to executable: ', '${workspaceFolder}' .. '/target/debug/', 'file')
-    end,
-    -- cwd = '${workspaceFolder}',
-    -- stopOnEntry = true,
-    showDisassemply = "never"
-  },
-}
+dap.adapters.rust = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path)
 
 require('dap.ext.vscode').load_launchjs()
 
